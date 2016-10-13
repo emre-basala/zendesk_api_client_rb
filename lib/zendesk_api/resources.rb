@@ -116,6 +116,8 @@ module ZendeskAPI
   end
 
   class Organization < Resource
+    extend CreateMany
+
     has Ability, :inline => true
     has Group
 
